@@ -38,11 +38,11 @@ func ConnectConsole() {
 		case "3":
 			DeleteCustomer(entity.Customer{})
 		case "4":
-			// addOrder(entity.Orders{})
+			AddOrder(entity.Orders{})
 		case "5":
-			// updateOrder(entity.Orders{})
+			UpdateOrder(entity.Orders{})
 		case "6":
-			// deleteOrder(entity.Orders{})
+			DeleteOrder(entity.Orders{})
 		case "7":
 		searchMenu:
 			for {
@@ -55,9 +55,9 @@ func ConnectConsole() {
 				fmt.Scanln(&searchChoice)
 				switch searchChoice {
 				case "1":
-					// searchBy(entity.Customer{})
+					SearchCustByID(entity.Customer{})
 				case "2":
-					// searchAll(entity.Customer{})
+					SearchAllCustomers(entity.Customer{})
 				case "0":
 					break searchMenu // balik ke menu utama
 				default:
@@ -76,9 +76,9 @@ func ConnectConsole() {
 				fmt.Scanln(&searchChoice)
 				switch searchChoice {
 				case "1":
-					// searchOrderBy(entity.Orders{})
+					SearchOrderBy(entity.Orders{})
 				case "2":
-					// SearchAllOrders(entity.Orders{})
+					SearchAllOrders(entity.Orders{})
 				case "0":
 					break searchMenuTx // balik ke menu utama
 				default:

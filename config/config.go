@@ -33,3 +33,11 @@ func ConnectDb() (*sql.DB, error) {
 	return db, nil
 
 }
+
+func BeginTrx(db *sql.DB) (*sql.Tx, error) {
+	tx, err := db.Begin()
+	if err != nil {
+		return nil, err
+	}
+	return tx, nil
+}
